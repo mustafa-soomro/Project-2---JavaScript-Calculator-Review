@@ -24,14 +24,13 @@ function  equalButPress(){
     
 }
 
-
+// Clears everything except set memory 
 function  clearButPress(){
 prevVal = '';
 newVal = '';
 resultVal = '';
 mathOperator = '';
 decimalClicked = false;
-valMemStored = '';
 document.getElementById('entry').value = '0'
 }
 
