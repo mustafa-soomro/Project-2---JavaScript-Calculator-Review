@@ -11,7 +11,27 @@ let valMemStored = '';
 
 
 function  numButPress(num){
-
+    // Check if a number has already been clicked
+    if(resultVal){
+        // Start a new number
+        newVal = num
+        // Reset to create a new result
+        resultVal = ''
+    } else {
+        // Use to block multi decimals
+        if (num === '.') {
+            if(decimalClicked != true){
+                // Take the current value of newVal and add the character pressed
+                newVal += num
+                // Sets decimal check var to true, wont allow more
+                decimalClicked = true
+            }
+        } else {
+            newVal += num
+        }
+    }
+// Update the display
+document.getElementById('entry').value = newVal
 }
 
 
